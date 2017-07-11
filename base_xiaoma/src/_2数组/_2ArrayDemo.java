@@ -1,24 +1,10 @@
 package _2数组;
 
-import java.util.HashMap;
-
 /**
  * Created by E430 on 2017/7/2.
  */
 public class _2ArrayDemo {
-    private static Object oo;
-    String address = "yangshu";
-    new HashMap
 
-
-    public boolean isNull(String address){
-        if (address == null) {
-            return true;
-        }
-
-
-    }
-    }
 
     //打印出[]格式的数组
     static String getArray(String[] strArray){
@@ -38,22 +24,22 @@ public class _2ArrayDemo {
         System.out.println(getArray(strArray));
 
         //打印一个颠倒的数组
-        String[] strArray2 = new String[]{"a","b","c","d"};
-
+        String[] oldArray = new String[]{"a","b","c","d"};
+        System.out.println(getNewArray(oldArray));
+        for(int i = 0;i<getNewArray(oldArray).length;i++){
+            System.out.println(getNewArray(oldArray)[i]);
+        }
     }
 
     //2打印一个颠倒的数组
-    static String getNewArray(String[] oldArray){
-        final String s = new String();
-        String[] newArray = new String[];
+
+    static String[] getNewArray(String[] oldArray){
+        String[] newArray = new String[oldArray.length];
         for(int i = oldArray.length-1;i>=0;i--){
-            newArray[i] = oldArray [i];
-            newArray[i] = oldArray [i];
-            newArray[i] = oldArray [i];
-
-
+            newArray[oldArray.length-1-i] = oldArray [i];
         }
-        oo = new Object();
+        return newArray;
+
     }
 
 }
