@@ -3,7 +3,7 @@ package _2数组;
 /**
  * Created by E430 on 2017/7/17.
  */
-public class _4bubbleSort {
+public class _5bubbleSort {
     public static void main(String[] args) {
         int[] arr = {3, 1, 5, 8, -7, 9, 0, 2};
 
