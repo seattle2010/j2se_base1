@@ -17,11 +17,14 @@ class SubClassx extends SuperClassx{
         boolean name = false; //隐藏了本类中的字段
         System.out.println(name); //false
         System.out.println(this.name); //18
-        System.out.println(this.name); //superClass.name
+        System.out.println(super.name); //superClass.name
     }
 
     public static void ooxx(){} //如果是static修饰 隐藏了父类的static覆盖方法 不叫覆盖 是隐藏
 }
 public class _4Super3 {
+    public static void main(String[] args) {
+        new SubClassx().doWork();
+    }
 
 }
