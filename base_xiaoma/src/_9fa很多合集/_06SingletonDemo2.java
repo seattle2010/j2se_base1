@@ -28,6 +28,9 @@ class ArrayUtil2 {
 }
 public class _06SingletonDemo2 {
     public static void main(String[] args) {
+        System.out.println(ArrayUtil2.getInstance() == ArrayUtil2.getInstance()); //true 单例每次创建都相等
+
+        ArrayUtil2.getInstance().sort(null);
         ArrayUtil2.getInstance().sort(null);
 
     }

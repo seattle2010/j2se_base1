@@ -50,10 +50,11 @@ public class _13引用类型转换 {
 
     public static void main(String[] args) {
         Person4 p4 = new Person4();
+
         Dog4 d4 = new Dog4();
-        Cat4 c4 = new Cat4();
         //p4.feed(new Dog4());
         p4.feed(d4);
+        Cat4 c4 = new Cat4();
         p4.feed(c4);
 
     }
