@@ -4,7 +4,7 @@ package _9fa很多合集;
  * Created by E430 on 2017/7/8.
  */
 //包装类的基本操作
-public class _10WapperDemo {
+public class _10WapperDemo包装类的常用操作 {
     public static void main(String[] args) {
         //基本(属性)?使用
         System.out.println(Integer.MAX_VALUE);

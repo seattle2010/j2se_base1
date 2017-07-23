@@ -9,15 +9,18 @@ class Outter {
 
     public void ooxx() {
         //外部内可以通过创建内部类对象 来访问内部类成员
-        System.out.println(new Inner().age);//这里相当于有个this   this.new Inner().age
+        System.out.println(this.new Inner().name);//这里相当于有个this   this.new Inner().age
     }
     //实例内部类
     class Inner {
-        int age = 17;
+        String name = "inner.name";
 
         public void test() {
+            String name = "local.name";
             //内部类可以访问外部类的成员
             System.out.println(name);
+            System.out.println(this.name);
+            System.out.println(Outter.this.name);
         }
     }
 }
