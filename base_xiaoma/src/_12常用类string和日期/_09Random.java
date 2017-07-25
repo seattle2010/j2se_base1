@@ -8,10 +8,11 @@ import java.util.Random;
 public class _09Random {
     public static void main(String[] args) {
         //Random类用来生成一个伪随机数  由Math.Random()方法而来 底层
+        //不放种子时候 是以当前系统时间为默认种子
         Random random = new Random(10);  //10是种子  任意  种子相同就会生成一样的随机数
         System.out.println(random.nextBoolean()); //Boolean随机数
         System.out.println(random.nextDouble()); //Double随机数
-        System.out.println(random.nextDouble()); //Double随机数
+        System.out.println(random.nextInt()); //Int随机数
 
         Random random1 = new Random(100);           //种子相同 生成的一样
         System.out.println(random1.nextInt()); //int随机数
@@ -22,6 +23,9 @@ public class _09Random {
            //   34+[0,145)
         int num = new Random().nextInt(145)+34;
         System.out.println(num);
+
+        System.out.println("-----");
+        System.out.println(new Random().nextInt(145));
 
     }
 }

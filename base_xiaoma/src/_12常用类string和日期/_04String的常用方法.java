@@ -22,6 +22,7 @@ public class _04String的常用方法 {
 
     private static void getStringInfo() {
         System.out.println("A BCDE ".length());//7
+        System.out.println(" A BCDE ".trim().length()); //消除前后空格
         System.out.println("Iam".charAt(0));//I
         System.out.println("LOVEU".charAt(4));//U
         System.out.println("ABCABC".indexOf("AB")); //AB子字符串出现的位置
