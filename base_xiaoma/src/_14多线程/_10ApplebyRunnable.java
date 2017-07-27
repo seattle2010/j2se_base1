@@ -10,6 +10,11 @@ class Apple implements Runnable {
     public void run() {
         for(int i = 0;i<50;i++){
             if(num>0){
+                try{
+                    Thread.sleep(10);
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
                 System.out.println(Thread.currentThread().getName()+"吃了编号为"+ num-- +"的苹果");
             }
         }

@@ -5,6 +5,7 @@ import java.io.IOException;
 /**
  * Created by E430 on 2017/7/22.
  */
+//查api中runtime  有exec方法
 public class _04创建进程操作process {
     public static void main(String[] args) throws IOException {
         //创建进程

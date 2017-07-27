@@ -14,7 +14,12 @@ class Person extends Thread {
     public void run() {
 for(int i = 0;i<50;i++){
     if(num>0){
-    System.out.println(super.getName()+"吃了编号"+num-- +"的苹果");
+        //try {
+        //    Thread.sleep(10);
+        //} catch (InterruptedException e) {
+        //    e.printStackTrace();
+        //}
+        System.out.println(super.getName()+"吃了编号"+num-- +"的苹果");
     }
 }
     }
