@@ -14,7 +14,7 @@ public class _02Febna {
             return 0;
         }else if(n==1){
             return 1;
-        
+
         }else{
             return fn(n - 1) + fn(n - 2);
         }

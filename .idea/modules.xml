@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/base1/base1.iml" filepath="$PROJECT_DIR$/base1/base1.iml" />
       <module fileurl="file://$PROJECT_DIR$/j2se_base.iml" filepath="$PROJECT_DIR$/j2se_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/j2se_hm/j2se_hm.iml" filepath="$PROJECT_DIR$/j2se_hm/j2se_hm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabaseTrain/javabaseTrain.iml" filepath="$PROJECT_DIR$/javabaseTrain/javabaseTrain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaoma_base/xiaoma_base.iml" filepath="$PROJECT_DIR$/xiaoma_base/xiaoma_base.iml" />
     </modules>
   </component>
 </project>
