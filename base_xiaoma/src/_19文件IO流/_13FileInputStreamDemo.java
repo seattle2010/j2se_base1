@@ -24,11 +24,21 @@ public class _13FileInputStreamDemo {
 //        从此输入流中将最多 b.length 个字节的数据读入一个 byte 数组中。
 
         byte[] buffer = new byte[10]; //先定义个小水桶 最多能存5个字节
+        //byte[] buffer1 = new byte[1024]; //一般定义为1024
         System.out.println(Arrays.toString(buffer));//先打印一下 看看  [0, 0, 0, 0, 0]
         //!!!返回缓冲区总字节数  如果设定小桶的容量小于总字节数 则显示小桶的容量
         int ret = inputStream.read(buffer);//相当于小水桶 先接到水桶里 缓冲区
         System.out.println(ret);
         System.out.println(Arrays.toString(buffer)); //[65, 65, 65, 66, 67]
+
+//        read(byte[] b, int off, int len)
+//        从此输入流中将最多 len 个字节的数据读入一个 byte 数组中。
+        int ret1 = inputStream.read(buffer, 2, 6);
+        System.out.println("!!!!"); 
+        System.out.println(ret1);
+        System.out.println(Arrays.toString(buffer));
+        //把文件中的所有数据都读取到程序中\
+
 
         //4.关闭资源
         inputStream.close();
