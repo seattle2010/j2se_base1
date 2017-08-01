@@ -13,6 +13,8 @@ public class _01FileDemo1 {
         String path1 = "c:\\java\\123.txt";
         String path2 = "c:/java/123.txt";
         String path3 = "c:"+ File.separator+"java"+File.separator+"123.txt";
+        System.out.println(path1);
+        System.out.println(path2);
         System.out.println(path3);
 
         //创建File对象
