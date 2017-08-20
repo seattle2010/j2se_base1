@@ -14,7 +14,8 @@ public class DMLTest {
         //1 加载注册驱动
         Class.forName("com.mysql.jdbc.Driver");
         //2获取连接对象
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcdemo","root","1234");
+        Connection conn = DriverManager.getConnection
+                ("jdbc:mysql://localhost:3306/jdbcdemo","root","1234");
         //3 创建语句对象
         Statement st = conn.createStatement();
         //4 执行sql
