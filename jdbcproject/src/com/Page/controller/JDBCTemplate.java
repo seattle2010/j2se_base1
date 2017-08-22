@@ -50,7 +50,7 @@ public class JDBCTemplate {
                 product.setId(rs.getLong("id"));
                 product.setProductName(rs.getString("productName"));
                 product.setDir_id(rs.getLong("dir_id"));
-                product.setSalePrice(rs.getBigDecimal("salePrice"));
+                product.setSalePrice(rs.getDouble("salePrice"));
                 product.setSupplier(rs.getString("supplier"));
                 product.setBrand(rs.getString("brand"));
                 product.setCutoff(rs.getDouble("cutoff"));

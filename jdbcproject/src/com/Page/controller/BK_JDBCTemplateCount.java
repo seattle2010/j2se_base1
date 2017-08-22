@@ -9,11 +9,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JDBCTemplateCount {
+public class BK_JDBCTemplateCount {
 
 
     //DQL操作模板   Count(*)
-    public static Integer query(String sql) {
+    public static long query(String sql, Object... params) {
         List<Product> list = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ps = null;
@@ -22,9 +22,13 @@ public class JDBCTemplateCount {
         try{
             conn = JdbcUtil.getconn();
             ps = conn.prepareStatement(sql);
+            for(int i = 0;i<params.length;i++){
+                ps.setObject(i + 1, params[i]);
+
+            }
             rs = ps.executeQuery();
             if (rs.next()) {
-                return rs.getInt(1);
+                return rs.getLong(1);
 
             }
         }catch(Exception e){
@@ -32,7 +36,7 @@ public class JDBCTemplateCount {
         }finally {
             JdbcUtil.close(conn,ps,rs);
         }
-        return 0;
+        return 0L;
     }
 
 }

@@ -45,4 +45,15 @@ public class PersonDaoImpl implements IPersonDao {
         List<Person> queryall = JDBCTemplate.query(sql);
         return queryall;
     }
+
+//    @Override
+//    public PageResult queryPage(Integer currentPage, Integer pageSize) {
+//    String baseSql = "SELECT * FROM product LIMIT ?,?";
+//
+//    List<Product> listData = com.Page.controller.JDBCTemplate.query(baseSql,currentPage-1,pageSize);
+//    //----------------
+//        String countSql = "SELECT COUNT(*) FROM product";
+//        Integer totalCount = JDBCTemplateCount.query(countSql,);
+//        return new PageResult();
+//    }
 }

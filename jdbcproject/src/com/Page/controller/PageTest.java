@@ -19,7 +19,7 @@ public class PageTest {
         List<Product> productList = JDBCTemplate.query(baseSql, (currentPage - 1) * pageSize, pageSize);
         //查询结果总数
         String countSql = "SELECT COUNT(*) FROM product";
-        Long queryCount = JDBCTemplateCount.query(countSql);
+        Integer queryCount = JDBCTemplateCount.query(countSql);
         Integer totalCount = queryCount.intValue();
         System.out.println(totalCount);
 

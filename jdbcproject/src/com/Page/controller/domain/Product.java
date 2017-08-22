@@ -1,12 +1,10 @@
 package com.Page.controller.domain;
 
-import java.math.BigDecimal;
-
 public class Product {
     private Long id;
     private String productName;
     private Long dir_id;
-    private BigDecimal salePrice;
+    private Double salePrice;
     private String supplier;
     private String brand;
     private Double cutoff;
@@ -58,11 +56,11 @@ public class Product {
         this.supplier = supplier;
     }
 
-    public BigDecimal getSalePrice() {
+    public Double getSalePrice() {
         return salePrice;
     }
 
-    public void setSalePrice(BigDecimal salePrice) {
+    public void setSalePrice(double salePrice) {
         this.salePrice = salePrice;
     }
 
@@ -74,7 +72,7 @@ public class Product {
         this.costPrice = costPrice;
     }
 
-    public Double getCutoff(double custoff) {
+    public Double getCutoff() {
         return cutoff;
     }
 
@@ -82,7 +80,7 @@ public class Product {
         this.cutoff = cutoff;
     }
 
-    public Long getDir_id(long dir_id) {
+    public Long getDir_id() {
         return this.dir_id;
     }
 

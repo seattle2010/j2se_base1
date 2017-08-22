@@ -14,4 +14,12 @@ public interface IPersonDao {
     public Person get(Long id);
 
     public List<Person> list();
+
+    /**
+     *
+     * @param currentPage 当前第几页
+     * @param pageSize  每页最多显示多少条数据
+     * @return 封装好结果集和
+     */
+//    PageResult queryPage(Integer currentPage,Integer pageSize) ;
 }

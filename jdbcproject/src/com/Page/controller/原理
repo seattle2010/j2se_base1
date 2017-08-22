@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------------------------------
+currentPage:当前页
+pageSize:每页最多显示多少条
+beginPage=1:首页
+prevPage:上一页
+nextPage:下一页
+totalPage:总页数/末页
+totalCount:总条数
+-------------------------------------------------------------------------------------------------------
+分页的原理:两条SQL语句:
+     1):查询符合条件的结果集.
+        SELECT * FROM 表名 [WHERE 条件1 AND 条件2] [ORDER BY .....] LIMIT ?,?;
+           第一个?:当前页从哪一个索引开始截取数据:start/begin/beginIndex(从0开始).
+                    beginIndex = (currentPage - 1) * pageSize;
+           第二个?:截取多少条数据:pageSize;
+     2):查询符合条件的结果总数.
+        SELECT COUNT(*) FROM 表名 [WHERE 条件1 AND 条件2];
+-------------------------------------------------------------------------------------------------------
+用户传入两条数据(用户设置的):
+    currentPage = 1;
+    pageSize = 10;
+-------------------------------------------------------------------------------------------------------
+程序员计算三个值:
+   总页数/末页(totalPage):
+       totalPage = totalCount % pageSize == 0 ? totalCount / pageSize : totalCount / pageSize + 1;
+   上一页(prevPage):
+       prevPage = currentPage - 1 >= 1 ? currentPage - 1 : 1;
+   下一页(nextPage):
+       nextPage = currentPage + 1 <= totalPage ? currentPage + 1 : totalPage;
